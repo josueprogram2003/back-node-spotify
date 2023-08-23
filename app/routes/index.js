@@ -17,13 +17,14 @@ fs.readdirSync(pathRouter).filter((file) => {
     }
 })
 
-router.get('*', (req, res) => {
-    res.status(404)
-    res.send({ error: 'Not found' })
-})
+// router.get('*', (req, res) => {
+//     res.status(404)
+//     res.send({ error: 'Not found' })
+// })
 
 router.get('/',(req,res)=>{
-    res.send("Hola Mundo")
+   const htmlContent = '<h1>Hola desde Node.js</h1>';
+   res.send(htmlContent);
 })
 
 module.exports = router
