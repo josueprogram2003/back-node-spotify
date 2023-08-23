@@ -44,7 +44,7 @@ const loginCtrl = async(req, res) => {
         }
 
     } catch (e) {
-        httpError(res, e)
+        res.status(500).send(res, e)
     }
 }
 
