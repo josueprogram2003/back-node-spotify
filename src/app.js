@@ -7,7 +7,7 @@ const { dbConnect } = require('./config/mongo')
 const PORT = process.env.PORT || 3000
 app.use(cors())
 app.use(epxress.json())
-app.use(epxress.static('public'));
+app.use(epxress.static('./public'));
 app.use('/api/1.0', require('./routes'))
 
 app.listen(PORT, () => {
