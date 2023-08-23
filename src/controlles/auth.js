@@ -15,15 +15,17 @@ const loginCtrl = async(req, res) => {
         }
 
         const { email, password } = req.body
+        console.log("--------------------------Paso-----------------")
+        console.log(mockUser.email,email,password)
 
-
-        if (mockUser.email !== 'test@test.com') {
+        if (mockUser.email !== email) {
             res.status(404)
             res.send({ error: 'User not found' })
         }
-
+        console.log("--------------------------Paso-----------------")
+        console.log(mockUser.email,email)
         const checkPassword = (mockUser.password === password)
-
+        console.log(checkPassword)
         //TODO JWT 👉
         const tokenSession = await tokenSign(mockUser) //TODO: 2d2d2d2d2d2d2
 
