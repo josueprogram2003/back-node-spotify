@@ -6,11 +6,7 @@ const { dbConnect } = require('./config/mongo')
 
 const PORT = process.env.PORT || 3000
 app.use(epxress.json())
-app.use(cors({
-  origin: 'https://spotify-9f6f4.web.app', // Cambia esta URL por la URL de tu aplicación Angular en producción
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: false // Si estás manejando cookies o sesiones
-}));
+app.use(cors());
 app.use(epxress.static('./public'));
 app.use('/', require('./routes'))
 
