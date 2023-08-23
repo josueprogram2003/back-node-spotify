@@ -12,8 +12,8 @@ app.use(cors({
   credentials: false // Si estás manejando cookies o sesiones
 }));
 app.use(epxress.static('./public'));
-app.use('/api/1.0', require('./routes'))
+app.use('/', require('./routes'))
 
 app.listen(PORT, () => {
-    console.log(`Tu API es http://localhost:${PORT}/api/1.0`)
+    console.log(`Tu API es http://localhost:${PORT}/`)
 })
