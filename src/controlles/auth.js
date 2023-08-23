@@ -28,7 +28,7 @@ const loginCtrl = async(req, res) => {
         console.log(checkPassword)
         //TODO JWT 👉
         const tokenSession = await tokenSign(mockUser) //TODO: 2d2d2d2d2d2d2
-
+        console.log(tokenSession)
         if (checkPassword) { //TODO Contraseña es correcta!
             res.send({
                 data: mockUser,
