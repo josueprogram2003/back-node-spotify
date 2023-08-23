@@ -10,7 +10,7 @@ app.use(epxress.json())
 app.use(cors({
   origin: 'https://spotify-9f6f4.web.app', // Cambia esta URL por la URL de tu aplicación Angular en producción
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true // Si estás manejando cookies o sesiones
+  credentials: false // Si estás manejando cookies o sesiones
 }));
 app.use(epxress.static('./public'));
 app.use('/api/1.0', require('./routes'))
